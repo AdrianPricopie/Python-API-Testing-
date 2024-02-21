@@ -2,7 +2,6 @@ import requests
 import random
 
 
-# metoda ajutatoare pentru order api
 def get_token():
     body = {
         "clientName": "Test",
@@ -19,6 +18,5 @@ def login(client_name, client_email):
     }
     return requests.post("https://simple-books-api.glitch.me/api-clients", json=body)
 
-print(get_token())
 
 
