@@ -7,9 +7,9 @@ Application under test:This application provides functionalities for managing bo
 Tools used:Python,pytest
 
 versions:
-- requests==2.31.0
-- pytest==8.0.1
-- pytest-html==4.1.1
+- requests 2.31.0
+- pytest 8.0.1
+- pytest-html 4.1.1
 
 ## How the token was created
 To submit or view an order, you need to register your API client.
