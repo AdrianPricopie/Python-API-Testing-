@@ -27,7 +27,7 @@ The request body needs to be in JSON format and include the following properties
 
 The response body will contain the access token. The access token is valid for 7 days.
 
-in python :
+In python :
 ![Screenhot code python ](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/Screenshots/Token.png)
 
 I have written two Python functions that interact with an API called "Simple Books API," which manages clients and authentication. Here's an explanation of the code:
