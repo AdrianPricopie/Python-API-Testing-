@@ -30,6 +30,23 @@ The response body will contain the access token. The access token is valid for 7
 in python :
 ![Screenhot code python ](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/Screenshots/Token.png)
 
+I have written two Python functions that interact with an API called "Simple Books API," which manages clients and authentication. Here's an explanation of the code:
+
+Function get_token:
+
+This function is designed to obtain an access token from the API.
+It constructs a dictionary body containing client information, such as the name and a randomly generated email address.
+Then, it sends a POST request to the endpoint "https://simple-books-api.glitch.me/api-clients" with the client data in JSON format.
+The response is then parsed, and the access token is extracted from it.
+
+Function login:
+
+This function is intended for authenticating a client within the API.
+It receives the client's name and email address.
+It constructs a dictionary body with the client's information.
+It sends a POST request to the same endpoint "https://simple-books-api.glitch.me/api-clients" with the client's data in JSON format.
+
+
 **Possible errors**
 
 Status code 409 - "API client already registered." Try changing the values for `clientEmail` and `clientName` to something else.
