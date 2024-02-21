@@ -36,12 +36,12 @@ Status code 409 - "API client already registered." Try changing the values for `
 HTTP methods supported by this API are GET, POST, PATCH, and DELETE. In this section, you can explore and perform tests on various types of operations supported by the  Simple Book. Some examples include:
 
 - **GET Requests:**
-  Retrieve a list of books;
-  Get detailed information about a specific book (replace :bookId with the actual book ID);
-  View all orders (requires authentication);
- View details of a specific order (replace :orderId with the actual order ID, requires authentication);
+   Retrieve a list of books;
+   Get detailed information about a specific book (replace :bookId with the actual book ID);
+   View all orders (requires authentication);
+   View details of a specific order (replace :orderId with the actual order ID, requires authentication);
 - **POST Requests:**
-  Submit a new order (requires authentication);
-  Register a new API client;
+   Submit a new order (requires authentication);
+   Register a new API client;
 - **PATCH Requests:** Update an existing order (replace :orderId with the actual order ID, requires authentication);
 - **DELETE Requests:** Delete an existing order (replace :orderId with the actual order ID, requires authentication);
