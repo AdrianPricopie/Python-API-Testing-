@@ -6,7 +6,7 @@ Application under test:This application provides functionalities for managing bo
 
 Tools used:Python,pytest
 
-versions:
+versions used:
 - requests 2.31.0
 - pytest 8.0.1
 - pytest-html 4.1.1
