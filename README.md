@@ -75,6 +75,14 @@ HTTP methods supported by this API are GET, POST, PATCH, and DELETE. In this sec
 #### I send responses to some endpoints:
 - `https://simple-books-api.glitch.me/status` (for status)
 - `https://simple-books-api.glitch.me/books?type={book_type}&limit={limit}` (returns all books by limit and type)
+
+ ![Screenhot code python ](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/Screenshots/request%20books.png)
+ 
+get_all_books(book_type="", limit=""): This function makes a GET request to a books API at a specific endpoint (https://simple-books-api.glitch.me/books). It accepts two optional parameters: book_type and limit. These parameters are used to filter the results based on the book type and limit the results to a certain number. The function returns the HTTP response received from the API.
+
+get_book(book_id): This function makes a GET request to the same API but to a specific endpoint to retrieve details about a particular book. The parameter book_id is used to specify which book to request. The function also returns the HTTP response received from the API.
+
+  
 - `https://simple-books-api.glitch.me/books/{book_id}` (returns one book by id)
 - `https://simple-books-api.glitch.me/api-clients` (Get token)
 - `https://simple-books-api.glitch.me/orders` (submit an order/get all orders/delete orders with correct body)
