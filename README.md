@@ -70,3 +70,17 @@ HTTP methods supported by this API are GET, POST, PATCH, and DELETE. In this sec
    Register a new API client;
 - **PATCH Requests:** Update an existing order (replace :orderId with the actual order ID, requires authentication);
 - **DELETE Requests:** Delete an existing order (replace :orderId with the actual order ID, requires authentication);
+
+
+#### I send responses to some endpoints:
+- `https://simple-books-api.glitch.me/status` (for status)
+- `https://simple-books-api.glitch.me/books?type={book_type}&limit={limit}` (returns all books by limit and type)
+- `https://simple-books-api.glitch.me/books/{book_id}` (returns one book by id)
+- `https://simple-books-api.glitch.me/api-clients` (Get token)
+- `https://simple-books-api.glitch.me/orders` (submit an order)
+- `https://simple-books-api.glitch.me/orders/{order_id}` (get an order by id)
+- Using all available HTTP methods.
+- The expected HTTP responses are received together with the HTTP messages following the requests (200, 201, 204,404 and 401).
+  Here you can find the list of [Test conditions](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/Test%20conditions.xlsx).
+
+
