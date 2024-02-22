@@ -1,4 +1,4 @@
-# API testing for simple book
+# API testing for simple book with pytest
 
 The scope of this project is to use all API knowledge gained throught the Software Testing course and apply them in practice, using a live application.
 
