@@ -87,6 +87,22 @@ get_book(book_id): This function makes a GET request to the same API but to a sp
 - `https://simple-books-api.glitch.me/api-clients` (Get token)
 - `https://simple-books-api.glitch.me/orders` (submit an order/get all orders/delete orders with correct body)
 - `https://simple-books-api.glitch.me/orders/{order_id}` (get an order by id)
+
+ ![Screenhot code python ](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/Screenshots/request%20order%20%232.png)
+
+ Imports:
+requests: Library for handling HTTP requests.
+request_api_clients: Module that contains functions for handling requests to APIs.
+Obtaining the authentication token:
+Used a function from request_api_clients to obtain an authentication token.
+Setting headers:
+Defines an authorization header using the obtained token.
+Function submit_order:
+Sends a book order to the API.
+Constructs the request body with book_id and customer_name.
+Uses requests.post() to make a POST request to the endpoint "https://simple-books-api.glitch.me/orders" with the authorization header.
+
+- `https://simple-books-api.glitch.me/api-clients` (Get token)
 - Using all available HTTP methods.
 - The expected HTTP responses are received together with the HTTP messages following the requests (200, 201, 204,404 and 401).
   Here you can find the list of [Test conditions](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/Test%20conditions.xlsx).
