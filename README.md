@@ -77,7 +77,7 @@ HTTP methods supported by this API are GET, POST, PATCH, and DELETE. In this sec
 - `https://simple-books-api.glitch.me/books?type={book_type}&limit={limit}` (returns all books by limit and type)
 - `https://simple-books-api.glitch.me/books/{book_id}` (returns one book by id)
 - `https://simple-books-api.glitch.me/api-clients` (Get token)
-- `https://simple-books-api.glitch.me/orders` (submit an order)
+- `https://simple-books-api.glitch.me/orders` (submit an order/get all orders/delete orders with correct body)
 - `https://simple-books-api.glitch.me/orders/{order_id}` (get an order by id)
 - Using all available HTTP methods.
 - The expected HTTP responses are received together with the HTTP messages following the requests (200, 201, 204,404 and 401).
