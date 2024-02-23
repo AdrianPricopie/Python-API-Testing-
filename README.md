@@ -315,6 +315,15 @@ The 'utils' folder contains a subfolder with [global constants](https://github.c
 - How I checked:Make a request to submit an order without providing a book ID,Verify if the response status code is 400 (Bad Request), indicating an error due to missing book ID,Verify if the 'error' key in the JSON response contains the expected error message.
 - [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
 
+# Execution report 
+
+Below you can find the execution report generated on the 23/02/2024:
+
+![Execution report](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/Screenshots/raport_pytest.png)
+
+
+
+
 
 
 
