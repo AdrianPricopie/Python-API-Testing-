@@ -323,7 +323,7 @@ Below you can find the execution report generated on the 23/02/2024:
 
 Out of 24 test cases, 22 have passed successfully, while 2 have failed. Two bugs have been identified during the testing process. 
 
-# Bug found:
+# Defects found
 I.Inconsistent Status Code on Order Submission
 
 Description:
