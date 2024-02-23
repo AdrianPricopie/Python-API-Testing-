@@ -148,8 +148,34 @@ The core functionality is encapsulated in the submit_order function, which initi
 
 - HTTPS method for request:POST
 - Test types / techniques used:Positive testing,unit testing,blackbox testing;
-- How I checked:response status and "accessToken" is present in the set of keys (keys()) of the JSON response received from the server.
+- How I checked:response status is 201 and "accessToken" is present in the set of keys (keys()) of the JSON response received from the server.
 - [Link to test_api_clients](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_api_clients.py).
+
+2.Verify API Status Endpoint Returns 'OK' Status
+
+- HTTPS method for request:GET
+- Test types / techniques used:Positive testing,unit testing,blackbox testing;
+- How I checked:response status is 200 OK.
+- [Link to test_status](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_status.py).
+
+3.Verify Successful Retrieval of All Books
+
+- HTTPS method for request:GET
+- Test types / techniques used:Positive testing,unit testing,blackbox testing;
+- How I checked:response status is 200 OK,the length of the JSON response array is 6,For each book, it checks if certain keys ("id", "name", "type", "available") are present in the keys of the book's dictionary. If any of these keys is missing, the test will fail.
+- [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
+
+4.Verify Retrieval of All Fiction Books
+
+- HTTPS method for request:GET
+- Test types / techniques used:Positive testing,unit testing,blackbox testing;
+- How I checked:response status is 200 OK,Iterate through each book in the response and check if its type is "fiction"
+- Additionally, for the test_get_all_fiction_books function, I have a fiction query parameter, which is a string. You can find a list [here](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/utils/constants.py).
+ of all constants for all of the tests.
+- [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
+
+
+
 
 
 
