@@ -144,6 +144,7 @@ The core functionality is encapsulated in the submit_order function, which initi
 
 # Test performed 
 
+The 'utils' folder contains a subfolder with [global constants](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/Test%20conditions.xlsx)., which I have used as parameters for tests in the [test folder](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/Test%20conditions.xlsx).
 
 1.Verifiy that i can log in successful with valid credentials and  generates acces token
 
