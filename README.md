@@ -321,6 +321,42 @@ Below you can find the execution report generated on the 23/02/2024:
 
 ![Execution report](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/Screenshots/raport_pytest.png)
 
+Out of 24 test cases, 22 have passed successfully, while 2 have failed. Two bugs have been identified during the testing process. 
+
+I.bug-> Inconsistent Status Code on Order Submission
+
+Description:
+During testing, an inconsistency was observed between the expected and observed behavior regarding the response status codes when attempting to submit an order without providing a required field.
+
+Steps to Reproduce:
+1.Send a POST request to /orders/ without providing the required customerName field in the request body.
+
+Actual Results:
+The received status code is 201 Created.
+
+Expected Results:
+The expected status code is 400 Bad Request since providing customerName is mandatory.
+
+II. Missing 'customerName' Key in GET Order by ID Response After Incomplete PATCH Request
+
+Description:
+An issue has been identified where the 'customerName' key is missing from the response of a GET request for a specific order ID after an incomplete PATCH request.
+
+Steps to Reproduce:
+1.Submit a POST request to create a new order and retrieve the order ID.
+2.Attempt to update the order by sending a PATCH request without providing a complete request body.
+3.Retrieve the order details using a GET request for the specific order ID.
+
+Actual results:
+
+KeyError:"CustomerName"
+
+Expected Result:The 'customerName' key should still be present in the response of the GET request for the specific order ID.
+
+
+
+
+
 
 
 
