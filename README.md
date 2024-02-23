@@ -209,6 +209,35 @@ The core functionality is encapsulated in the submit_order function, which initi
 - How I checked:response status is 400 bad request,Check if the error message in the response matches the expected error message.
 - [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
 
+10.Verify Handling of Non-Existent Book
+
+- HTTPS method for request:GET
+- Test types / techniques used:Negative testing,unit testing,blackbox testing
+- How I checked:response status is 400 bad request,It checks if the JSON response contains an 'error' key with a corresponding message. The error message should indicate that there is no book with the specified ID
+- [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
+
+11.Verify Handling of Negative Limit in Query
+
+- HTTPS method for request:GET
+- Test types / techniques used:Negative testing,unit testing,blackbox testing,boundary value
+- How I checked:response status is 400 bad request,It checks if the JSON response contains an 'error' key with a corresponding message. The error message should indicate that the provided limit value is invalid and must be greater than 0.
+- [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
+
+12.Verify Retrieval of Books with Valid Limit and Type
+
+- HTTPS method for request:GET
+- Test types / techniques used:Negative testing,unit testing,blackbox testing
+- How I checked:response status is 200 OK,It checks if the number of books in the response is less than or equal to 2. This ensures that the system respects the specified limit,It iterates through each book in the response and checks if the book type is "fiction". This ensures that all books in the response have the correct book type.
+- [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
+
+  
+
+
+
+
+
+
+
 
 
 
