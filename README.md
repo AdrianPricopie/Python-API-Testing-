@@ -272,6 +272,26 @@ The core functionality is encapsulated in the submit_order function, which initi
 - How I checked: Submit an order to create some data and retrieve the order ID,Make . request to update the order with a new customer name,Verify if the response status code is 204 (No Content), indicating a successful update,Make a request to get the updated order,Verify if the customer name in the updated order matches the new customer name.
 - [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
 
+19.Verify Deletion of an Order
+
+- HTTPS method for request:DELETE
+- Test types / techniques used:Positive testing,unit testing,blackbox testing
+- How I checked: Submit an order to create some data and retrieve the order ID,Make a request to delete the order,Verify if the response status code is 204 (No Content), indicating a successful deletion,Make a request to get the deleted order,Verify if the response status code is 404 (Not Found),Verify if the 'error' key in the JSON response contains the expected error message
+- [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
+
+20.Verify Submission of an Order for an Out-of-Stock Book
+
+- HTTPS method for request:POST
+- Test types / techniques used:Negative testing,unit testing,blackbox testing
+- How I checked: 
+- [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
+
+
+
+
+
+
+
   
 
 
