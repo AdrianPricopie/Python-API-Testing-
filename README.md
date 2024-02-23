@@ -171,7 +171,6 @@ The core functionality is encapsulated in the submit_order function, which initi
 - HTTPS method for request:GET
 - Test types / techniques used:Positive testing,unit testing,blackbox testing;
 - How I checked:response status is 200 OK,Iterate through each book in the response and check if its type is "fiction"
-- Additionally, for the test_get_all_fiction_books function, I have a fiction query parameter, which is a string. You can find a list [here](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/utils/constants.py) of all constants for all of the tests.
 - [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
 
 5.Verify Retrieval of All Non-Fiction Books
@@ -229,6 +228,59 @@ The core functionality is encapsulated in the submit_order function, which initi
 - Test types / techniques used:Negative testing,unit testing,blackbox testing
 - How I checked:response status is 200 OK,It checks if the number of books in the response is less than or equal to 2. This ensures that the system respects the specified limit,It iterates through each book in the response and checks if the book type is "fiction". This ensures that all books in the response have the correct book type.
 - [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
+
+13.Verification of order submission
+
+- HTTPS method for request:POST
+- Test types / techniques used:Postive testing,unit testing,blackbox testing
+- How I checked:response status is 200 OK,Verify if the 'created' key in the JSON response is True,Verify if the 'orderId' key exists in the set of keys of the JSON response.
+- [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
+
+14.Verify Handling of Incorrect Order Submission
+
+- HTTPS method for request:POST
+- Test types / techniques used:Positive testing,unit testing,blackbox testing
+- How I checked:Make a request to submit an order with an incorrect book ID and a customer name
+,Verify if the 'error' key in the JSON response contains the expected error message.
+- [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
+
+ 15.Verify Order Submission Without Authorization Token
+
+- HTTPS method for request:POST
+- Test types / techniques used:Negative testing,unit testing,blackbox testing
+- How I checked: Make a request to submit an order without providing any authorization token,Verify if the response status code is 401 (Unauthorized),Verify if the 'error' key in the JSON response contains the expected error message.
+- [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
+
+16.Verify Retrieval of an Order by Valid ID
+
+- HTTPS method for request:GET
+- Test types / techniques used:Positive testing,unit testing,blackbox testing
+- How I checked: Submit an order to obtain a valid order ID,Make a request to get the order using the obtained order ID,Verify if the response status code is 200 (OK), Verify if the 'customerName' in the JSON response matches the expected customer name,Verify if the 'bookId' in the JSON response matches the expected book ID,Verify if the 'customerName' in the JSON response matches the expected customer name
+- [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
+
+17.Verify Retrieval of All Orders
+
+- HTTPS method for request:GET
+- Test types / techniques used:Positive testing,unit testing,blackbox testing
+- How I checked: Submit two orders to create some data,Make a request to get all orders,Verify if the number of orders in the response is 2,Verify if the order IDs of the submitted orders are present in the response
+- [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
+
+18.Verify Updating an Order
+
+- HTTPS method for request:PATCH
+- Test types / techniques used:Positive testing,unit testing,blackbox testing
+- How I checked: Submit an order to create some data and retrieve the order ID,Make . request to update the order with a new customer name,Verify if the response status code is 204 (No Content), indicating a successful update,Make a request to get the updated order,Verify if the customer name in the updated order matches the new customer name.
+- [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
+
+  
+
+
+
+ 
+ 
+  
+
+
 
   
 
