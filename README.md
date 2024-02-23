@@ -90,17 +90,9 @@ get_book(book_id): This function makes a GET request to the same API but to a sp
 
  ![Screenhot code python ](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/Screenshots/request%20order%20%232.png)
 
- Imports:
-requests: Library for handling HTTP requests.
-request_api_clients: Module that contains functions for handling requests to APIs.
-Obtaining the authentication token:
-Used a function from request_api_clients to obtain an authentication token.
-Setting headers:
-Defines an authorization header using the obtained token.
-Function submit_order:
-Sends a book order to the API.
-Constructs the request body with book_id and customer_name.
-Uses requests.post() to make a POST request to the endpoint "https://simple-books-api.glitch.me/orders" with the authorization header.
+'The code begins with necessary imports, including the requests library for managing HTTP requests and the request_api_clients module, which houses functions designed for handling requests to APIs. The process of obtaining an authentication token involves the use of a function from request_api_clients.
+Following this, the headers are configured by defining an authorization header using the acquired authentication token. This header is crucial for ensuring secure and authorized communication with the API.
+The core functionality is encapsulated in the submit_order function, which initiates the process of sending a book order to the API. The function meticulously constructs the request body by incorporating the book_id and customer_name parameters. Finally, the requests.post() method is employed to execute a POST request to the specified endpoint, "https://simple-books-api.glitch.me/orders," and includes the authorization header for authentication. This comprehensive process ensures the submission of book orders to the designated API endpoint, facilitating seamless interaction with the underlying system
 
 - `https://simple-books-api.glitch.me/api-clients` (Get token)
 - Using all available HTTP methods.
