@@ -145,10 +145,11 @@ The core functionality is encapsulated in the submit_order function, which initi
 # Test performed 
 
 1.Verifiy that i can log in successful with valid credentials and  generates acces token
-HTTPS method for request:POST
-Test types / techniques used:Positive testing,unit testing,blackbox testing;
-What I checked:response status and "accessToken" is present in the set of keys (keys()) of the JSON response received from the server.
-[Link to test_api_clients](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_api_clients.py).
+
+- HTTPS method for request:POST
+- Test types / techniques used:Positive testing,unit testing,blackbox testing;
+- What I checked:response status and "accessToken" is present in the set of keys (keys()) of the JSON response received from the server.
+- [Link to test_api_clients](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_api_clients.py).
 
 
 
