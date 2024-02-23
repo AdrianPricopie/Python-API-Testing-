@@ -82,11 +82,54 @@ get_all_books(book_type="", limit=""): This function makes a GET request to a bo
 
 get_book(book_id): This function makes a GET request to the same API but to a specific endpoint to retrieve details about a particular book. The parameter book_id is used to specify which book to request. The function also returns the HTTP response received from the API.
 
+ ![Screenhot code python ](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/Screenshots/request%20order%20%234.png)
+
+ def submit_order_without_bookId(customer_name):
+
+This function submits an order without specifying a bookId.
+Constructs the request body with the provided customer_name.
+Uses requests.post() to make a POST request to the "https://simple-books-api.glitch.me/orders" endpoint, including the JSON body and the authorization headers.
+
+def get_all_orders():
+
+This function retrieves all orders from the API.
+Uses requests.get() to make a GET request to the "https://simple-books-api.glitch.me/orders" endpoint, including the authorization headers.
+
+def get_order(order_id):
+
+This function retrieves the details of a specific order identified by order_id from the API.
+Uses requests.get() to make a GET request to the "https://simple-books-api.glitch.me/orders/{order_id}" endpoint, including the authorization headers.
+
+
+
   
 - `https://simple-books-api.glitch.me/books/{book_id}` (returns one book by id)
 - `https://simple-books-api.glitch.me/api-clients` (Get token)
 - `https://simple-books-api.glitch.me/orders` (submit an order/get all orders/delete orders with correct body)
 - `https://simple-books-api.glitch.me/orders/{order_id}` (get an order by id)
+
+ ![Screenhot code python ](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/Screenshots/request%20order%20%231.png)
+
+'update_order(order_id, new_customer_name):
+
+This function is designed to update the details of an existing order.
+It takes two parameters: order_id identifies the order to be updated, and new_customer_name represents the new customer name.
+Constructs the request body with the new customer name.
+Uses the requests.patch() method to make a PATCH request to the specific endpoint of the order with order_id, including the authorization header and the updated request body.
+
+update_order_without_body(order_id):
+
+This function is intended for an update but does not include a request body.
+Takes a single parameter, order_id, to identify the order to be updated.
+Uses the requests.patch() method to make a PATCH request to the specific endpoint of the order with order_id, including the authorization header. It does not include a request body.
+
+delete_order(order_id):
+
+This function is designed to delete an existing order.
+Takes a single parameter, order_id, to identify the order to be deleted.
+Uses the requests.delete() method to make a DELETE request to the specific endpoint of the order with order_id, including the authorization header.
+
+  
 
  ![Screenhot code python ](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/Screenshots/request%20order%20%232.png)
 
