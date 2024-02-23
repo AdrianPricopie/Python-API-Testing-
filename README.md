@@ -144,6 +144,8 @@ The core functionality is encapsulated in the submit_order function, which initi
 
 # Test performed 
 
+- Additionally, for the test_get_all_fiction_books function, I have a fiction query parameter, which is a string. You can find a list [here](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/utils/constants.py) of all constants for all of the tests.
+
 1.Verifiy that i can log in successful with valid credentials and  generates acces token
 
 - HTTPS method for request:POST
@@ -172,6 +174,44 @@ The core functionality is encapsulated in the submit_order function, which initi
 - How I checked:response status is 200 OK,Iterate through each book in the response and check if its type is "fiction"
 - Additionally, for the test_get_all_fiction_books function, I have a fiction query parameter, which is a string. You can find a list [here](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/utils/constants.py) of all constants for all of the tests.
 - [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
+
+5.Verify Retrieval of All Non-Fiction Books
+
+- HTTPS method for request:GET
+- Test types / techniques used:Positive testing,unit testing,blackbox testing;
+- How I checked:response status is 200 OK,Iterate through each book in the response and check if its type is "non-fiction"
+- [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
+
+6.Verify Limiting Number of Books in the Response
+
+- HTTPS method for request:GET
+- Test types / techniques used:Positive testing,unit testing,blackbox testing;
+- How I checked:response status is 200 OK, Send a request to get books with a limit of 3 using the get_all_books function and the number of books in the response is less than or equal to 3.
+- [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
+
+7.Verify Retrieval of a Specific Book
+
+- HTTPS method for request:GET
+- Test types / techniques used:Positive testing,unit testing,blackbox testing;
+- How I checked:response status is 200 OK,ID of the book in the response is 1.
+- [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
+
+8.Verify Handling of Invalid Book Type in Query
+
+- HTTPS method for request:GET
+- Test types / techniques used:Negative testing,unit testing,blackbox testing;
+- How I checked:response status is 400 bad request,Check if the error message in the response matches the expected error message.
+- [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
+
+9.Verify Handling of Excessive Limit in Query
+
+- HTTPS method for request:GET
+- Test types / techniques used:Negative testing,unit testing,blackbox testing,boundary value 
+- How I checked:response status is 400 bad request,Check if the error message in the response matches the expected error message.
+- [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
+
+
+
 
 
 
