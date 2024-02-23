@@ -148,98 +148,98 @@ The core functionality is encapsulated in the submit_order function, which initi
 1.Verifiy that i can log in successful with valid credentials and  generates acces token
 
 - HTTPS method for request:POST
-- Test types / techniques used:Positive testing,unit testing,blackbox testing;
+- Test types / techniques used:Positive testing,blackbox testing;
 - How I checked:response status is 201 and "accessToken" is present in the set of keys (keys()) of the JSON response received from the server.
 - [Link to test_api_clients](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_api_clients.py).
 
 2.Verify API Status Endpoint Returns 'OK' Status
 
 - HTTPS method for request:GET
-- Test types / techniques used:Positive testing,unit testing,blackbox testing;
+- Test types / techniques used:Positive testing,blackbox testing;
 - How I checked:response status is 200 OK.
 - [Link to test_status](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_status.py).
 
 3.Verify Successful Retrieval of All Books
 
 - HTTPS method for request:GET
-- Test types / techniques used:Positive testing,unit testing,blackbox testing;
+- Test types / techniques used:Positive testing,blackbox testing;
 - How I checked:response status is 200 OK,the length of the JSON response array is 6,For each book, it checks if certain keys ("id", "name", "type", "available") are present in the keys of the book's dictionary. If any of these keys is missing, the test will fail.
 - [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
 
 4.Verify Retrieval of All Fiction Books
 
 - HTTPS method for request:GET
-- Test types / techniques used:Positive testing,unit testing,blackbox testing;
+- Test types / techniques used:Positive testing,blackbox testing;
 - How I checked:response status is 200 OK,Iterate through each book in the response and check if its type is "fiction"
 - [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
 
 5.Verify Retrieval of All Non-Fiction Books
 
 - HTTPS method for request:GET
-- Test types / techniques used:Positive testing,unit testing,blackbox testing;
+- Test types / techniques used:Positive testing,blackbox testing;
 - How I checked:response status is 200 OK,Iterate through each book in the response and check if its type is "non-fiction"
 - [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
 
 6.Verify Limiting Number of Books in the Response
 
 - HTTPS method for request:GET
-- Test types / techniques used:Positive testing,unit testing,blackbox testing;
+- Test types / techniques used:Positive testing,blackbox testing;
 - How I checked:response status is 200 OK, Send a request to get books with a limit of 3 using the get_all_books function and the number of books in the response is less than or equal to 3.
 - [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
 
 7.Verify Retrieval of a Specific Book
 
 - HTTPS method for request:GET
-- Test types / techniques used:Positive testing,unit testing,blackbox testing;
+- Test types / techniques used:Positive testing,blackbox testing;
 - How I checked:response status is 200 OK,ID of the book in the response is 1.
 - [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
 
 8.Verify Handling of Invalid Book Type in Query
 
 - HTTPS method for request:GET
-- Test types / techniques used:Negative testing,unit testing,blackbox testing;
+- Test types / techniques used:Negative testing,blackbox testing;
 - How I checked:response status is 400 bad request,Check if the error message in the response matches the expected error message.
 - [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
 
 9.Verify Handling of Excessive Limit in Query
 
 - HTTPS method for request:GET
-- Test types / techniques used:Negative testing,unit testing,blackbox testing,boundary value 
+- Test types / techniques used:Negative testing,blackbox testing,boundary value 
 - How I checked:response status is 400 bad request,Check if the error message in the response matches the expected error message.
 - [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
 
 10.Verify Handling of Non-Existent Book
 
 - HTTPS method for request:GET
-- Test types / techniques used:Negative testing,unit testing,blackbox testing
+- Test types / techniques used:Negative testing,blackbox testing
 - How I checked:response status is 400 bad request,It checks if the JSON response contains an 'error' key with a corresponding message. The error message should indicate that there is no book with the specified ID
 - [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
 
 11.Verify Handling of Negative Limit in Query
 
 - HTTPS method for request:GET
-- Test types / techniques used:Negative testing,unit testing,blackbox testing,boundary value
+- Test types / techniques used:Negative testing,blackbox testing,boundary value
 - How I checked:response status is 400 bad request,It checks if the JSON response contains an 'error' key with a corresponding message. The error message should indicate that the provided limit value is invalid and must be greater than 0.
 - [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
 
 12.Verify Retrieval of Books with Valid Limit and Type
 
 - HTTPS method for request:GET
-- Test types / techniques used:Negative testing,unit testing,blackbox testing
+- Test types / techniques used:Negative testing,blackbox testing
 - How I checked:response status is 200 OK,It checks if the number of books in the response is less than or equal to 2. This ensures that the system respects the specified limit,It iterates through each book in the response and checks if the book type is "fiction". This ensures that all books in the response have the correct book type.
 - [Link to test_books](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_books.py).
 
 13.Verification of order submission
 
 - HTTPS method for request:POST
-- Test types / techniques used:Postive testing,unit testing,blackbox testing
+- Test types / techniques used:Postive testing,blackbox testing
 - How I checked:response status is 200 OK,Verify if the 'created' key in the JSON response is True,Verify if the 'orderId' key exists in the set of keys of the JSON response.
 - [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
 
 14.Verify Handling of Incorrect Order Submission
 
 - HTTPS method for request:POST
-- Test types / techniques used:Positive testing,unit testing,blackbox testing
+- Test types / techniques used:Positive testing,blackbox testing
 - How I checked:Make a request to submit an order with an incorrect book ID and a customer name
 ,Verify if the 'error' key in the JSON response contains the expected error message.
 - [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
@@ -247,44 +247,79 @@ The core functionality is encapsulated in the submit_order function, which initi
  15.Verify Order Submission Without Authorization Token
 
 - HTTPS method for request:POST
-- Test types / techniques used:Negative testing,unit testing,blackbox testing
-- How I checked: Make a request to submit an order without providing any authorization token,Verify if the response status code is 401 (Unauthorized),Verify if the 'error' key in the JSON response contains the expected error message.
+- Test types / techniques used:Negative testing,blackbox testing
+- How I checked:Make a request to submit an order without providing any authorization token,Verify if the response status code is 401 (Unauthorized),Verify if the 'error' key in the JSON response contains the expected error message.
 - [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
 
 16.Verify Retrieval of an Order by Valid ID
 
 - HTTPS method for request:GET
-- Test types / techniques used:Positive testing,unit testing,blackbox testing
-- How I checked: Submit an order to obtain a valid order ID,Make a request to get the order using the obtained order ID,Verify if the response status code is 200 (OK), Verify if the 'customerName' in the JSON response matches the expected customer name,Verify if the 'bookId' in the JSON response matches the expected book ID,Verify if the 'customerName' in the JSON response matches the expected customer name
+- Test types / techniques used:Positive testing,blackbox testing
+- How I checked:Submit an order to obtain a valid order ID,Make a request to get the order using the obtained order ID,Verify if the response status code is 200 (OK), Verify if the 'customerName' in the JSON response matches the expected customer name,Verify if the 'bookId' in the JSON response matches the expected book ID,Verify if the 'customerName' in the JSON response matches the expected customer name
 - [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
 
 17.Verify Retrieval of All Orders
 
 - HTTPS method for request:GET
-- Test types / techniques used:Positive testing,unit testing,blackbox testing
-- How I checked: Submit two orders to create some data,Make a request to get all orders,Verify if the number of orders in the response is 2,Verify if the order IDs of the submitted orders are present in the response
+- Test types / techniques used:Positive testing,blackbox testing
+- How I checked:Submit two orders to create some data,Make a request to get all orders,Verify if the number of orders in the response is 2,Verify if the order IDs of the submitted orders are present in the response
 - [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
 
 18.Verify Updating an Order
 
 - HTTPS method for request:PATCH
-- Test types / techniques used:Positive testing,unit testing,blackbox testing
+- Test types / techniques used:Positive testing,blackbox testing
 - How I checked: Submit an order to create some data and retrieve the order ID,Make . request to update the order with a new customer name,Verify if the response status code is 204 (No Content), indicating a successful update,Make a request to get the updated order,Verify if the customer name in the updated order matches the new customer name.
 - [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
 
 19.Verify Deletion of an Order
 
 - HTTPS method for request:DELETE
-- Test types / techniques used:Positive testing,unit testing,blackbox testing
-- How I checked: Submit an order to create some data and retrieve the order ID,Make a request to delete the order,Verify if the response status code is 204 (No Content), indicating a successful deletion,Make a request to get the deleted order,Verify if the response status code is 404 (Not Found),Verify if the 'error' key in the JSON response contains the expected error message
+- Test types / techniques used:Positive testing,blackbox testing
+- How I checked:Submit an order to create some data and retrieve the order ID,Make a request to delete the order,Verify if the response status code is 204 (No Content), indicating a successful deletion,Make a request to get the deleted order,Verify if the response status code is 404 (Not Found),Verify if the 'error' key in the JSON response contains the expected error message
 - [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
 
 20.Verify Submission of an Order for an Out-of-Stock Book
 
 - HTTPS method for request:POST
 - Test types / techniques used:Negative testing,unit testing,blackbox testing
-- How I checked: 
+- How I checked:Submit an order for a specific book ID with a given customer name, Verify if the response status code is 404 ,Verify if the 'error' key in the JSON response contains the expected error message
 - [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
+
+21.Verify Updating an Order Without a Complete Body
+
+- HTTPS method for request:PATCH
+- Test types / techniques used:Positive testing,unit testing,blackbox testing
+- How I checked:Submit an order to create some data and retrieve the order ID,Make a request to update the order without providing a complete request body,Verify if the response status code is 204 (No Content), indicating a successful update,Make a request to get the updated order,Verify if the customer name in the updated order remains unchanged
+- [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
+
+22.Verify Retrieval of an Order by Invalid ID
+
+- HTTPS method for request:GET
+- Test types / techniques used:Negative testing,unit testing,blackbox testing
+- How I checked:Submit an order to create some data and retrieve the order ID,Make a request to get an order using an invalid ID,Verify if the response status code is 404 (Not Found),Verify if the 'error' key in the JSON response contains the expected error message.
+- [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
+
+23.Verify Submission of an Order Without Customer Name
+
+- HTTPS method for request:POST
+- Test types / techniques used:Negative testing,unit testing,blackbox testing
+- How I checked:Make a request to submit an order without providing a customer name,Verify if the response status code is 400 (Bad Request), indicating an error due to missing customer name
+- [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
+
+24.Verify Submission of an Order Without Book ID
+
+- HTTPS method for request:POST
+- Test types / techniques used:Negative testing,unit testing,blackbox testing
+- How I checked:Make a request to submit an order without providing a book ID,Verify if the response status code is 400 (Bad Request), indicating an error due to missing book ID,Verify if the 'error' key in the JSON response contains the expected error message.
+- [Link to test_order](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_order.py).
+
+
+
+
+
+
+
 
 
 
