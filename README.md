@@ -148,7 +148,7 @@ The core functionality is encapsulated in the submit_order function, which initi
 
 - HTTPS method for request:POST
 - Test types / techniques used:Positive testing,unit testing,blackbox testing;
-- What I checked:response status and "accessToken" is present in the set of keys (keys()) of the JSON response received from the server.
+- How I checked:response status and "accessToken" is present in the set of keys (keys()) of the JSON response received from the server.
 - [Link to test_api_clients](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_api_clients.py).
 
 
