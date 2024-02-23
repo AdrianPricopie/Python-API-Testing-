@@ -323,7 +323,8 @@ Below you can find the execution report generated on the 23/02/2024:
 
 Out of 24 test cases, 22 have passed successfully, while 2 have failed. Two bugs have been identified during the testing process. 
 
-I.bug-> Inconsistent Status Code on Order Submission
+# Bug found:
+I.Inconsistent Status Code on Order Submission
 
 Description:
 During testing, an inconsistency was observed between the expected and observed behavior regarding the response status codes when attempting to submit an order without providing a required field.
@@ -352,6 +353,22 @@ Actual results:
 KeyError:"CustomerName"
 
 Expected Result:The 'customerName' key should still be present in the response of the GET request for the specific order ID.
+
+# Conclusion
+
+This comprehensive testing project has effectively utilized various test cases to validate the functionality of the Simple Books API. The combination of positive and negative testing, along with the consideration of different scenarios, has provided valuable insights into the reliability and correctness of the API.
+
+The test cases cover a wide range of functionalities, including authentication, retrieving book details, submitting orders, updating orders, deleting orders, and handling different error scenarios. The use of clear test conditions, well-defined test types, and thorough execution has contributed to the identification of two critical bugs.
+
+The first bug highlights an inconsistency in the status code returned during order submission without providing a required field (customerName). The observed behavior (201 Created) deviates from the expected result (400 Bad Request), leading to a potential issue in handling missing information.
+
+The second bug addresses a missing 'customerName' key in the response of a GET request for a specific order ID after an incomplete PATCH request. The absence of the 'customerName' key, leading to a KeyError, signifies a discrepancy in maintaining the order details after an incomplete update.
+Overall, the successful execution of 22 out of 24 test cases demonstrates the robustness of the API in various scenarios. The identified bugs offer opportunities for refinement and improvement in the API's error handling and response consistency. The execution report, including the test outcomes and bugs, provides a comprehensive overview of the testing process and outcomes.
+
+The project's documentation is well-structured, providing clarity on the tested functionalities, tools used, and the test environment. The inclusion of execution reports and bug reports enhances the transparency and effectiveness of the testing effort.
+
+In conclusion, this API testing project has effectively applied testing principles and methodologies to ensure the reliability and correctness of the Simple Books API. The identified bugs contribute to the continuous improvement of the API, fostering a robust and dependable application
+
 
 
 
