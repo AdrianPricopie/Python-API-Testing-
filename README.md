@@ -142,4 +142,19 @@ The core functionality is encapsulated in the submit_order function, which initi
 - The expected HTTP responses are received together with the HTTP messages following the requests (200, 201, 204,404 and 401).
   Here you can find the list of [Test conditions](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/Test%20conditions.xlsx).
 
+# Test performed 
+
+1.Verifiy that i can log in successful with valid credentials and  generates acces token
+HTTPS method for request:POST
+Test types / techniques used:Positive testing,unit testing,blackbox testing;
+What I checked:response status and "accessToken" is present in the set of keys (keys()) of the JSON response received from the server.
+[Link to test_api_clients](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/tests/test_api_clients.py).
+
+
+
+
+
+
+
+
 
