@@ -144,7 +144,6 @@ The core functionality is encapsulated in the submit_order function, which initi
 
 # Test performed 
 
-- Additionally, for the test_get_all_fiction_books function, I have a fiction query parameter, which is a string. You can find a list [here](https://github.com/AdrianPricopie/Python-API-Testing-/blob/main/utils/constants.py) of all constants for all of the tests.
 
 1.Verifiy that i can log in successful with valid credentials and  generates acces token
 
