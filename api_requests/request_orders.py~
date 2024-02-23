@@ -29,6 +29,9 @@ def submit_order_without_bookId(customer_name):
 
     return requests.post("https://simple-books-api.glitch.me/orders", json=body, headers=headers)
 
+
+
+
 def get_all_orders():
     return  requests.get('https://simple-books-api.glitch.me/orders',headers=headers)
 
@@ -39,6 +42,9 @@ def get_order(order_id):
 def submit_order_without_token():
     return requests.post("https://simple-books-api.glitch.me/orders")
 
+# print(submit_order('1','IONA213').json())
+# # print(get_all_orders().json())
+# print(get_an_order_by_id())
 
 def update_order(order_id,new_customer_name):
     body={
