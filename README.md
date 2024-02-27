@@ -11,6 +11,33 @@ versions used:
 - pytest 8.0.1
 - pytest-html 4.1.1
 
+## StartUp
+
+          
+    # Example commands to install and run the project
+       open command block or terminal
+       cd to file where you want to put this project
+       git clone https://github.com/user/project.git
+       open the project
+       python -m venv venv
+       source venv/bin/activate  # or .\venv\Scripts\activate on Windows
+       pytest tests --html=raport_pytest.html
+ 
+   if python -m venv venv or activate the venv don't work you can try this
+             
+       python -m pip install --upgrade pip  
+       python -m venv venv --without-pip
+       .\venv\Scripts\Activate  
+       python -m ensurepip
+       pytest tests --html=raport_pytest.html
+
+
+               
+               
+
+
+
+
 ## How the token was created
 To submit or view an order, you need to register your API client.
 
