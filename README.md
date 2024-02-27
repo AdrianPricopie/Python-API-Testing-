@@ -14,7 +14,7 @@ versions used:
 ## StartUp
 
           
-    # Example commands to install and run the project
+    Example commands to install and run the project
        open command block or terminal
        cd to file where you want to put this project
        git clone https://github.com/user/project.git
